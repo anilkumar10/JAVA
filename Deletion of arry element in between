@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,x;
+	cout<<"enter the size of array = ";
+	cin>>n;
+	cout<<"how many elements do you want to enter in array = ";
+	cin>>x;
+  int i,a[n],no,pos;
+  cout<<"Enter your elements in Array: ";
+  for(i=0;i<x;i++)
+  {
+  cin>>a[i];
+  }
+  cout<<"\n\nelements present in Array: ";
+  for(i=0;i<x;i++)
+  {
+  cout<<a[i]<<" ";
+  }
+  cout<<"\n\nEnter position where you to delete number: ";
+  cin>>pos;
+  if(pos>x)
+  {
+  	cout<<"enter the valid input: ";
+  }
+  else
+	{
+		--pos;
+	  for(i=pos;i<x-1;i++)
+ 		{
+  		a[i]=a[i+1];
+ 	 	} 
+	}
+	
+  for(i=0;i<x-1;i++)
+  {
+  	cout<<a[i]<<" ";
+  }
+  return 0;
+}

@@ -1,43 +1,53 @@
+//INSERTION
 #include<iostream>
 using namespace std;
 class ins
 {
-public:
-int data()
-{
-int n,x,no,pos,i;
-cout<<"enter the size of array = ";
-cin>>n;
-cout<<"how many elements do you want to enter in array = ";
-cin>>x;
-int a[n];
-cout<<"Enter your elements in Array: ";
-for(i=0;i<x;i++)
-cin>>a[i];
-cout<<"\n\nelements present in Array: ";
-for(i=0;i<x;i++)
-cout<<a[i]<<" ";
-cout<<"\n\nEnter position where you to insert number: ";
-cin>>pos;
-if(pos>x+1)
-cout<<"\n\n enter valid input";
-else
- {
-  cout<<"\n\nEnter the new number: ";
-  cin>>no;
-  --pos;
-  for(i=x-1;i>=pos;i--)
-  a[i+1]=a[i];
-  a[pos]=no;
-  cout<<"\n\nNew data in Array: ";
-  for(i=0;i<x+1;i++)
-  cout<<a[i]<<" ";
-  }
- }
+	public:
+		int size,n,x,no,pos,i;
+		int* pointers;
+		int data()
+		{
+			cout<<"enter the size of array = ";
+			cin>>size;
+			pointers= new int[size];
+			cout<<"how many elements do you want to enter in array = ";
+			cin>>x;
+  			cout<<"Enter your elements in Array: ";
+  			for(i=0;i<x;i++)
+  			cin>>pointers[i];
+  			cout<<"\n\nelements present in Array: ";
+  			for(i=0;i<x;i++)
+  			cout<<pointers[i]<<" ";
+		}
+		int search()
+		{
+			cout<<"\n\nEnter position where you to insert number: ";
+  			cin>>pos;
+  			if(pos>x+1)
+  			cout<<"\n\n enter valid input";
+  			else
+ 	 		{
+  			cout<<"\n\nEnter the new number: ";
+  			cin>>no;
+  			--pos;
+  			for(i=x-1;i>=pos;i--)
+  			pointers[i+1]=pointers[i];
+  			pointers[pos]=no;
+  			}
+		}
+		int display()
+		{
+			cout<<"\n\nNew data in Array: ";
+  			for(i=0;i<x+1;i++)
+  			cout<<pointers[i]<<" ";
+		}
 };
 int main()
 {
 	ins x;
 	x.data();
+	x.search();
+	x.display();
 	return 0;
 }

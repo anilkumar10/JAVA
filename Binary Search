@@ -3,53 +3,60 @@ using namespace std;
 class binsearch
 {
 	public:
+		 int i,beg=0,pos,end,no,flag,c ,size;
+ 		 int* pointers;
 		int data()
 		{
-  int x,beg=0,pos,end,no,flag,c;
   cout<<"how many elements do you want to enter in array = ";
-  cin>>x;
-  int i,a[x];
+  cin>>size;
+  pointers=new int[size];
   cout<<"Enter your elements in Array: ";
-  for(i=0;i<x;i++)
+  for(i=0;i<size;i++)
   {
-  cin>>a[i];
+  cin>>pointers[i];
   }
   cout<<"\n\nelements present in Array: ";
-  for(i=0;i<x;i++)
+  for(i=0;i<size;i++)
   {
-  cout<<a[i]<<" ";
+  cout<<pointers[i]<<" ";
   }
   cout<<"\n\nenter the element want to search: ";
-  cin>>no;
+}
+	int search()
+	{
+		  cin>>no;
   pos=i/2;
-  if(a[pos]==no)
+  if(pointers[pos]==no)
   {
   	flag=1;
   	c=pos+1;
   }
-  if(no<a[pos])
+  if(no<pointers[pos])
   {
   	for(i=0;i<=pos-1;i++)
   	{
-  		if(a[i]==no)
+  		if(pointers[i]==no)
   		{
   			flag=1;
   			c=i+1;
 		}
 	}
   }
-  if(no>a[pos])
+  if(no>pointers[pos])
   {
-  	  	for(i=pos+1;i<=x-1;i++)
+  	  	for(i=pos+1;i<=size-1;i++)
   	{
-  		if(a[i]==no)
+  		if(pointers[i]==no)
   		{
   			flag=1;
   			c=i+1;
 		}
 	}
   }
-  if(flag==1)
+	}
+	int display()
+	{
+		  if(flag==1)
   {
   	cout<<"\n"<<no<<" element is present"<<" at position: "<<c;
   }
@@ -57,11 +64,13 @@ class binsearch
   {
   	cout<<"element is not present";
   }
-  }
+	}
 };
 int main()
 {
 	binsearch x;
 	x.data();
+	x.search();
+	x.display();
 	return 0;
 }

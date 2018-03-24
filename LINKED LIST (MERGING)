@@ -32,7 +32,7 @@ class list
    cout<<"\n The list is created! \n";
    }
     void display()
-    {
+   {
    struct node *ptr=start;
    cout<<"\n  List is \n";
    while(ptr!=NULL)

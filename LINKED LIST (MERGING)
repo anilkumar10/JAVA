@@ -9,7 +9,7 @@ class list
 {
    struct node *start;
    public:
-    void create()
+   void create()
     {
    struct node *nxt_node,*pre_node;
    int value,no,i;

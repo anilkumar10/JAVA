@@ -1,3 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author ANIL
+ */
 
 import java.util.Scanner;
 
@@ -12,7 +22,7 @@ import java.util.Scanner;
  * @author ANIL
  */
 import java.util.Scanner;
-public class swapno
+public class swapno2
 {
     public static void main(String args[])
             
@@ -39,11 +49,11 @@ public class swapno
         pos2=sc.nextInt();
         pos1=pos1-1;
         pos2=pos2-1;
-        
-        temp=arr[pos1];
-        arr[pos1]=arr[pos2];
-        arr[pos2]=temp;
-        
+       
+        arr[pos1]=arr[pos1]+arr[pos2];
+        arr[pos2]=arr[pos1]-arr[pos2];
+        arr[pos1]=arr[pos1]-arr[pos2];
+
         System.out.println("Swaped list : ");
         for(int i=0;i<num;i++)
         {
@@ -51,3 +61,4 @@ public class swapno
         }
     }
 }
+

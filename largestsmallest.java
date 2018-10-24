@@ -16,7 +16,7 @@ public class largestsmallest
 
         Scanner sc=new Scanner(System.in);
         int k = 0;
-        System.out.println("Enter the length of the array : ");
+        System.out.print("Enter the length of the array : ");
         k=sc.nextInt();
         int arr[]=new int[k];
         System.out.println("Enter the elements in the array : ");
@@ -32,5 +32,13 @@ public class largestsmallest
         }
         
         System.out.println("largest no in the array is : "+max);
+        int min=arr[0];
+        for(int i=0;i<k;i++)
+        {
+            if(min>arr[i])
+                   
+                min=arr[i];
+        }
+        System.out.print("largest no in the array is : "+min);
     }
 }

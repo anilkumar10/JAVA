@@ -1,0 +1,45 @@
+/**
+ *
+ * @author ANIL
+ */
+import java.util.Scanner;
+public class vowel_rem 
+{
+    public static void main(String args[])
+    {
+        int i;
+        Scanner sc=new Scanner(System.in);
+        String data;
+        System.out.print("Enter String : ");
+        data  = sc.nextLine();
+        int ca=0,ce=0,ci=0,co=0,cu=0;
+       
+        for(i=0;i<data.length();i++)
+        {
+            if(data.charAt(i)=='a' || data.charAt(i)=='e' || data.charAt(i)=='i' || data.charAt(i)=='o' || data.charAt(i)=='u' || data.charAt(i)=='A' || data.charAt(i)=='E' || data.charAt(i)=='I' || data.charAt(i)=='O' || data.charAt(i)=='U')
+            {
+                if(data.charAt(i)=='a' || data.charAt(i)=='A'){
+                    System.out.println(data.charAt(i)+" is present at "+"position "+i);
+                ca++;}
+                if(data.charAt(i)=='e' || data.charAt(i)=='E'){
+                    System.out.println(data.charAt(i)+" is present at "+"position "+i);
+                ce++;}
+                if(data.charAt(i)=='i' || data.charAt(i)=='I'){
+                    System.out.println(data.charAt(i)+" is present at "+"position "+i);
+                ci++;}
+                if(data.charAt(i)=='o' || data.charAt(i)=='O'){
+                    System.out.println(data.charAt(i)+" is present at "+"position "+i);
+                co++;}
+                if(data.charAt(i)=='u' || data.charAt(i)=='U'){
+                    System.out.println(data.charAt(i)+" is present at "+"position "+i);
+                cu++;}
+            }
+        }
+        System.out.println("\n\n\t\tFINAL RESULTS OF REPEATATION : \n\n");
+        System.out.println("a or A"+" is repeating "+ca+" times");
+        System.out.println("e or E"+" is repeating "+ce+" times");
+        System.out.println("i or I"+" is repeating "+ci+" times");
+        System.out.println("o or O"+" is repeating "+co+" times");
+        System.out.println("u or U"+" is repeating "+cu+" times");
+    }
+}
